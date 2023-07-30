@@ -1,0 +1,12 @@
+<div 
+  class="list-tasks"
+  (dragstart)="start($event)"
+  (dragover)="over($event)"
+  (drop)="drop($event)"
+>
+<ng-container   *ngFor="let task of tasks">
+  <app-task [text]="task.name" [id]="task.name | idGenerator" ></app-task>
+</ng-container>
+ 
+</div>
+
